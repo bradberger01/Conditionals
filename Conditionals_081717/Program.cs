@@ -51,15 +51,16 @@ namespace Conditionals_081717
             double dinnerBill = double.Parse(Console.ReadLine());
 
             // computer calculates the customer appreciation discount and gives each person's total
-            if (dinnerBill >= 50)
+            double totalCost = dinnerBill;
+            if (totalCost >= 50)
             {
               Console.WriteLine("Congratulation, You received a 10% discount on your bill");
-              Console.WriteLine("Each person owes $" + ((dinnerBill - (dinnerBill * .10)) / dinnerParty));
+              Console.WriteLine("Each person owes $" + ((totalCost - (totalCost * .10)) / dinnerParty));
             
             }
             else if (dinnerBill < 50)
             { Console.WriteLine("Congratulations! You received a 5% discount on your bill");
-              Console.WriteLine("Each person owes $" + ((dinnerBill - (dinnerBill * .05)) / dinnerParty));
+              Console.WriteLine("Each person owes $" + ((totalCost - (totalCost * .05)) / dinnerParty));
             }
         }
     }
